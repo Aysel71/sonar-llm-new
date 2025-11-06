@@ -1,0 +1,58 @@
+{
+  "task": "niah",
+  "description": "Needle-in-a-Haystack task configuration",
+  
+  "data": {
+    "num_samples": 10000,
+    "context_length": 512,
+    "needle_type_k": "words",
+    "needle_type_v": "numbers",
+    "depth_distribution": "uniform",
+    "val_split": 0.1
+  },
+  
+  "model": {
+    "name": "raxtemur/sonar-llm-1.3b",
+    "hidden_size": 1024,
+    "num_layers": 10,
+    "num_heads": 16
+  },
+  
+  "training": {
+    "epochs": 3,
+    "batch_size": 1,
+    "grad_accum_steps": 4,
+    "learning_rate": 2e-5,
+    "weight_decay": 1e-3,
+    "warmup_steps": 100,
+    "max_grad_norm": 1.0
+  },
+  
+  "precision": {
+    "use_fp16": false,
+    "use_bf16": false,
+    "use_mixed_precision": false
+  },
+  
+  "logging": {
+    "logging_steps": 10,
+    "eval_steps": 50,
+    "save_steps": 100
+  },
+  
+  "evaluation": {
+    "metric": "string_match_all",
+    "num_examples": 10
+  },
+  
+  "output": {
+    "output_dir": "../models/niah_model",
+    "save_best_only": false
+  },
+  
+  "hardware": {
+    "gpu_id": 0,
+    "num_workers": 0
+  }
+}
+
