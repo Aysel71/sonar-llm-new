@@ -1,6 +1,6 @@
 # SONAR-LLM Experiments
 
-Professional implementation of SONAR-LLM training on RULER benchmark tasks.
+Implementation of SONAR-LLM training on RULER benchmark tasks.
 
 ## 📁 Project Structure
 
@@ -25,7 +25,7 @@ sonar_llm_experiments/
 └── README.md                  # This file
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Generate NIAH Dataset
 
@@ -92,7 +92,7 @@ CUDA_VISIBLE_DEVICES=1 python train_qa.py \
   --gpu_id 1
 ```
 
-## 📊 RULER Benchmark Metrics
+##  RULER Benchmark Metrics
 
 ### NIAH Task
 - **Metric**: `string_match_all`
@@ -104,7 +104,7 @@ CUDA_VISIBLE_DEVICES=1 python train_qa.py \
 - Checks if AT LEAST ONE expected answer is present
 - More lenient than `string_match_all`
 
-## 🧹 Text Cleaning
+## Text Cleaning
 
 Following [FlagEmbedding approach](https://github.com/FlagOpen/FlagEmbedding/blob/master/research/Long_LLM/activation_beacon/main/eval_needle.py):
 
@@ -197,7 +197,7 @@ models/niah_model/
 - Add distractors to make it harder
 - Monitor accuracy - should be >30% after training
 
-## ⚠️ Known Issues
+##  Known Issues
 
 1. **Mixed Precision**: Currently disabled due to GradScaler compatibility issues
 2. **Memory**: Precomputing embeddings requires significant RAM
