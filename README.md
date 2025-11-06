@@ -2,7 +2,7 @@
 
 Implementation of SONAR-LLM training on RULER benchmark tasks.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 sonar_llm_experiments/
@@ -203,11 +203,12 @@ models/niah_model/
 2. **Memory**: Precomputing embeddings requires significant RAM
 3. **Speed**: ~3-4 it/s during training
 
-## 📚 References
+##  References
 
 - [RULER Benchmark](https://github.com/hsiehjackson/RULER)
 - [FlagEmbedding NIAH](https://github.com/FlagOpen/FlagEmbedding/tree/master/research/Long_LLM/activation_beacon)
 - [SONAR](https://github.com/facebookresearch/SONAR)
+-[SONAR](https://github.com/FusionBrainLab/SONAR-LLM)
 
 ## 📧 Contact
 
